@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<form action="{{ url_for('do_edit')}}" method="POST">
+    <input type="hidden" name ="id" value="{{blog[0]}}">
+
+    <h3>内容</h3>
+    <textarea name="content">{{blog[2]}}</textarea>
+    <br>
+    <p style="color:#666">发布时间：{{ blog[4] }}</p >
+    <input type="submit" value="提交">
+</form>
+
+{% endblock %}

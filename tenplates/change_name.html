@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block content %}
+<h3>修改账号用户名</h3>
+{% if errors %}
+<div style="color:red;">{{errors}}</div>
+{% endif %}
+<form action="{{url_for('do_change_name')}}" method="post">
+    <p>当前用户名：{{username}}</p >
+    <p>新用户名：<input type="text" name="new_name"></p >
+    <p><input type="submit" value="确认修改"></p >
+</form>
+<a href="{{url_for( 'index')}}">返回首页</a >
+{% endblock %}
